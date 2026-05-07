@@ -1,0 +1,200 @@
+.bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bg.png.jpg');
+    background-size: cover;
+    filter: blur(8px) brightness(0.5);
+    z-index: -1;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 100px;
+    font-family: 'help me';
+    color:#8B0000;
+    font-size: 80px;
+}
+.warning-box {
+    background: rgba(20, 0, 0, 0.8); 
+    border: 1px double #8B0000;      
+    color: #cccccc;
+    padding: 30px;
+    margin: 40px auto;
+    width: 70%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 0 15px rgba(139, 0, 0, 0.3);
+}
+
+.warning-box h3 {
+    color: #ff0000;
+    margin-top: 0;
+    letter-spacing: 2px;
+}
+
+.warning-main {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.warning-disclaimer {
+    font-size: 14px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.warning-box hr {
+    border: 0;
+    border-top: 1px solid #444;
+    margin: 20px auto;
+    width: 50%;
+}
+
+.warning-box strong {
+    color: #ff4d4d;
+}
+
+.corrupt-container {
+    color: #cccccc;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.8;
+    padding-left: 15px;
+    border-left: 3px solid #8b0000;
+}
+
+[class^="green-glitch-"], .glitch-4 {
+    position: relative;
+    display: inline-block;
+}
+
+[class^="green-glitch-"]::before,
+.glitch-4::before {
+    content: attr(data-glitch);
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #0a0a0a;
+    visibility: hidden;
+}
+
+/* --- KEEPING YOUR "BEING FOLLOWED" EXACTLY THE SAME --- */
+.glitch-4 { animation: vanish-red 3s infinite step-end; }
+.glitch-4::before { 
+    color: #ff0000; 
+    animation: aggressive-tear 3s infinite step-end;
+}
+
+/* --- NEW RANDOM GREEN GLITCHES --- */
+/* Different timings (2.1s, 3.7s, 4.4s) ensure they never sync up */
+.green-glitch-1::before { color: #00ff00; animation: jump-green 2.1s infinite step-end; }
+.green-glitch-2::before { color: #00ff00; animation: jump-green 3.7s infinite 0.5s step-end; }
+.green-glitch-3::before { color: #00ff00; animation: jump-green 4.4s infinite 1.2s step-end; }
+
+@keyframes jump-green {
+    0%, 10%, 12%, 100% { visibility: hidden; clip-path: inset(50% 0 50% 0); }
+    11% { 
+        visibility: visible; 
+        clip-path: inset(10% -10px 70% -10px); 
+        transform: translate(-10px, -2px);
+        text-shadow: 2px 0 #00ff00;
+    }
+}
+
+/* --- THE RED ANIMATIONS YOU LOVED --- */
+@keyframes aggressive-tear {
+    0%, 10%, 12%, 100% { visibility: hidden; }
+    11% { 
+        visibility: visible; 
+        clip-path: inset(40% -20px 40% -20px); 
+        transform: translate(15px, -2px) scaleY(1.5);
+    }
+}
+
+@keyframes vanish-red {
+    0%, 68%, 75%, 100% { opacity: 1; transform: none; color: #cccccc; }
+    70% { opacity: 0; }
+    72% { opacity: 1; transform: skewX(-30deg); color: #ff0000; text-shadow: 0 0 8px #ff0000; }
+    74% { opacity: 0; }
+}
+ /* Update your main container */
+.intro-section {
+    max-width: 950px;
+    margin: 100px auto;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    /* This creates a dark "glow" around the text area to add depth */
+    background: radial-gradient(circle, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 80%);
+    padding: 40px;
+}
+
+.intro-main-text {
+    color: #ffffff !important;
+    font-size: 1.5rem; /* Slightly larger */
+    line-height: 1.8;
+    margin-bottom: 70px;
+    font-weight: 300; /* Makes it look sleeker */
+    /* Subtle glow so it doesn't look flat */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2); 
+}
+
+/* The Advisory - the part that should feel "different" */
+.advisory-raw {
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle divider line */
+    padding-top: 40px;
+}
+
+.caution-label {
+    color: #ffcc00 !important;
+    font-family: 'Courier New', Courier, monospace; /* Technical font */
+    font-weight: bold;
+    font-size: 1.3rem;
+    letter-spacing: 5px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.advisory-title {
+    color: #ffffff !important;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 900;
+    letter-spacing: 8px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.advisory-text {
+    margin-top: 25px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #dddddd !important;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic; /* Makes it feel like a warning whispered to you */
+    letter-spacing: 0.5px;
+}
+percase;
+    opacity: 0.9;
+}
+
+.advisory-text {
+    margin-top: 25px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #dddddd !important;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic; /* Makes it feel like a warning whispered to you */
+    letter-spacing: 0.5px;
+}
+@keyframes pulse-red {
+    0% { text-shadow: 0 0 0px transparent; }
+    100% { text-shadow: 0 0 8px rgba(255, 0, 0, 0.3); }
+}
